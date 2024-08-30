@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+
+    <% for(let i=0; i < postArray.length; i++){ %>
+        <h1>
+            <%= postArray[i].title %>
+        </h1>
+        <p>
+            <%= postArray[i].body.substring(0, 300) + " ..." %>
+            <a href="posts/<%= postArray[i]._id %>">Read more</a>
+        </p>
+    <% } %>
+
+<%- include("partials/footer") %>
